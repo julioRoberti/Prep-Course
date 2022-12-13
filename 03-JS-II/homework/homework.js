@@ -65,20 +65,20 @@ function colors(color) {
   switch (color) {
     case 'blue':
       console.log ('This is blue');
-    break 
+      break 
       
     case 'red':
       console.log ('This is red');
-    break 
+      break 
     case 'green':
       console.log ('This is green');
-    break 
+      break 
     case 'orange':
       console.log ('This is orange');
-    break 
+      break 
     default:
       console.log ('Color not found');
-}
+  }
 }
 
 function esDiezOCinco(numero) {
@@ -124,7 +124,7 @@ function fizzBuzz(numero) {
 var tres = numero % 3;
 var cinco = numero % 5;
 if (tres === 0 && cinco === 0)
-  return 'fizzBuzz';
+  return 'fizzbuzz';
 if (tres === 0)
   return 'fizz';
 if (cinco === 0)
@@ -141,16 +141,16 @@ function operadoresLogicos(num1, num2, num3) {
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
-if (num1 === 0 || num2 === 0 || num3 === 0)
-  return 'Error';
-if (num1 > num2 && num1 > num3 && num1 > 0)
-  return 'Número 1 es mayor y positivo';
-if ( num1 < 0 || num2 < 0|| num3 < 0)
-  return 'Hay negativos';
-if (num3 > num1 && num3 > num2)
-  return num3 + 1;
-else
-  return false;
+  if ( num1 < 0 || num2 < 0|| num3 < 0)
+    return 'Hay negativos';
+  if (num1 === 0 || num2 === 0 || num3 === 0)
+    return 'Error';
+  if (num1 > num2 && num1 > num3 && num1 > 0)
+    return 'Número 1 es mayor y positivo';
+  if (num3 > num1 && num3 > num2)
+    return num3 + 1;
+  else
+    return false;
 }
 
 function esPrimo(numero) {
@@ -179,10 +179,12 @@ function esVerdadero(valor){
 function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
-  //Escribe tu código aquí 
-  for (i = 0; i <= 10; i++)
-  console.log(i * 6)
-  
+  //Escribe tu código aquí
+  var tabla = []; 
+  for (i = 0; i <= 10; i++){
+    tabla[i] = (6 * i);
+  }
+  return tabla;
 }
 
 function tieneTresDigitos(numero){
@@ -200,12 +202,15 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
-  let result = 0;
-  var condicion = numero + (5 * 8);
-  do {i = numero + 5;
-    result = result  + i;
-  } while (result < condicion)
-  console.log(result)
+  let i = 2;
+  let numeroFinal = (numero + 5);
+  do {
+    i = i + 1;
+    numeroFinal = numeroFinal + 5;
+    
+  } while (i <= 8);
+  return numeroFinal;
+  
 }
 
 
